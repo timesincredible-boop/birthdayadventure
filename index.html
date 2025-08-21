@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maryanne’s Birthday Adventure 🎂</title>
+  <style>
+    body {
+      background: #222;
+      font-family: "Trebuchet MS", sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2.5em;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff4da6, 0 0 10px #ff4da6; }
+      to { text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff99cc; }
+    }
+    .btn {
+      background: #ff4da6;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      margin: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ff80bf;
+      transform: scale(1.1);
+    }
+    .hidden {
+      display: none;
+    }
+    .message {
+      font-size: 1.5em;
+      margin-top: 30px;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Welcome to Maryanne’s 15th Birthday Adventure 🎉</h1>
+  <p>Click the buttons to unlock the story…</p>
+
+  <button class="btn" onclick="showStep(1)">🚪 Enter the Party</button>
+  <div id="step1" class="hidden message">
+    You step into a magical room filled with balloons 🎈 and sparkles ✨
+    <br><br>
+    <button class="btn" onclick="showStep(2)">🎂 Find the Cake</button>
+  </div>
+
+  <div id="step2" class="hidden message">
+    Wow! A giant cake appears with candles glowing 🎂🔥
+    <br><br>
+    <button class="btn" onclick="showStep(3)">🎁 Open the Gift</button>
+  </div>
+
+  <div id="step3" class="hidden message">
+    Inside the gift box is a scroll that says:
+    <br><br>
+    <strong>“Happy 15th Birthday Maryanne! 🥳🎉 Wishing you love, laughter, and endless adventures ahead!”</strong>
+    <br><br>
+    🎊🎈✨
+  </div>
+
+  <script>
+    function showStep(step) {
+      document.getElementById("step" + step).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
+
